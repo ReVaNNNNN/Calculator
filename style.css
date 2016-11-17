@@ -1,0 +1,79 @@
+/* Basic reset styles */
+
+* {
+
+	margin: 0;
+	padding: 0;
+	/* Właściwości typu border, padding nie powiększają elementów */
+	box-sizing: border-box;
+
+	/* Stylizacja tekstu */
+	font: bold 14px Arial, sans-serif;
+}
+
+/* Dodanie ładnego efektu tła */
+html
+{
+	height: 100%;
+	background: radial-gradient(circle, #FFF 20%, #CCC);
+	background-size: cover;
+}
+
+#calculator
+{
+	width: 325px;
+	height: auto;
+
+	margin: 100px auto;
+	padding: 20px 20px 9px;
+	/* Tło które jest mieszaniną dwóch kolorów */
+	background: linear-gradient(#9DD2EA, #8BCEEC);
+	/* Zaokrąglenie rogów */
+	border-radius: 3px;
+	/* Wykorzystanie box-shadow do stworzenai efektów 3D */
+	box-shadow: 0px 4px #009DE4;
+}
+
+.top span.clear
+{
+	float: left;
+}
+
+.top .screen
+{
+	height: 40px;
+	width: 212px;
+	float: right;
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.keys, .top
+{
+	/* Schowanie zawartości elementu gdy nie mieści się ona w tym elemencie */
+	overflow: hidden;
+}
+
+.keys span, .top span.clear
+{
+	float: left;
+	/*  Ustawianie klawiszy obok siebie */
+	width: 66px;
+	height: 36px;
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	margin: 0 7px 11px 0;
+	/* wyśrodkowanie cyfer w klawiszach */
+	line-height: 36px;
+	/* kolor czcionki klawiszy */
+	color: #888;
+	text-align: center;
+}
+
+/* Usuniecie prawych marginesów z klawiszy operacyjnych */
+span.operator
+{
+	margin-right: 0;
+}
