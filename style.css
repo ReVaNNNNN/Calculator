@@ -44,9 +44,20 @@ html
 	height: 40px;
 	width: 212px;
 	float: right;
+
+	padding: 0 10px;
+
 	background: rgba(0, 0, 0, 0.2);
 	border-radius: 3px;
 	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+
+	/* Wygląd tekstu w wyświetlaczu */
+	font-size: 17px;
+	line-height: 40px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
 }
 
 .keys, .top
@@ -59,6 +70,8 @@ html
 {
 	float: left;
 	/*  Ustawianie klawiszy obok siebie */
+	position: relative;
+	top:0;
 	cursor: pointer;
 	width: 66px;
 	height: 36px;
@@ -73,6 +86,9 @@ html
 	text-align: center;
 
 	user-select: none;
+
+	/* Przesuniecia */
+	transition: all 0.2s ease;
 }
 
 /* Usuniecie prawych marginesów z klawiszy operacyjnych */
@@ -124,4 +140,25 @@ span.operator
 	background: #F68991;
 	box-shadow: 0 4px #D3545D;
 	color: white;
+}
+
+/* Efekt po wciśnięciu klawisza */
+
+.keys span:active
+{
+	box-shadow: 0 0px #6B54D3;
+	top: 4px;
+	
+}
+
+.keys span.eval:active
+{
+	box-shadow: 0 0px #717A33;
+	top: 4px;
+}
+
+.top span.clear:active
+{
+	box-shadow: 0 0px #D3545D;
+	top: 4px;
 }
